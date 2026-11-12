@@ -1,4 +1,3 @@
-// image imports
 import bumiManusia from '../assets/bumi-manusia.jpg'
 import laskarPelangi from '../assets/laskar-pelangi.jpg'
 import pulang from '../assets/pulang.jpg'

@@ -38,7 +38,7 @@ export default function Home() {
   })
 
   return (
-    <div className="px-4 pb-24 md:px-6">
+    <div className="px-4 pb-1 md:px-6">
       
       {/* hero section */}
       <section
@@ -53,9 +53,11 @@ export default function Home() {
           }}
         />
 
-        <div className="relative z-10 grid w-full grid-cols-1 gap-12 md:grid-cols-2 md:gap-8 items-center">
+        {/* Grid layout - gap lebih rapat di mobile */}
+        <div className="relative z-10 grid w-full grid-cols-1 gap-8 md:grid-cols-2 md:gap-8 items-center">
           
-          <div>
+          {/* TEXT - Di mobile taruh bawah (order-2), di desktop taruh kiri (order-1) */}
+          <div className="order-2 md:order-1">
             <p className={`text-[11px] uppercase tracking-[0.2em] text-neutral-500 transition-all duration-1000 ease-out ${mounted ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'}`}>
               Toko Buku Independen
             </p>
@@ -83,12 +85,12 @@ export default function Home() {
             </div>
           </div>
 
-          {/* hero image */}
-          <div className={`flex justify-center md:justify-end transition-all duration-1000 delay-500 ease-out ${mounted ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'}`}>
+          {/* IMAGE - Di mobile taruh atas (order-1), di desktop taruh kanan (order-2) */}
+          <div className={`order-1 md:order-2 flex justify-center md:justify-end transition-all duration-1000 delay-300 md:delay-500 ease-out ${mounted ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'}`}>
             <img 
               src={heroBook} 
               alt="Buku Tundra" 
-              className="w-full max-w-lg object-contain drop-shadow-2xl hover:scale-105 transition-transform duration-500" 
+              className="w-full max-w-[240px] sm:max-w-xs md:max-w-lg object-contain drop-shadow-2xl hover:scale-105 transition-transform duration-500" 
             />
           </div>
 

@@ -27,8 +27,8 @@ export default function Katalog() {
         </p>
       </div>
 
-      {/* filter */}
-      <div className="mb-10 flex justify-center gap-2 overflow-x-auto pb-2 [&::-webkit-scrollbar]:hidden">
+      {/* filter bar - justify-start untuk mobile, justify-center untuk desktop */}
+      <div className="mb-10 flex justify-start gap-2 overflow-x-auto pb-2 md:justify-center [&::-webkit-scrollbar]:hidden">
         {categories.map((cat) => (
           <button
             key={cat}
@@ -44,14 +44,14 @@ export default function Katalog() {
         ))}
       </div>
 
-      {/* grid */}
+      {/* grid - disamakan gap-nya dengan Home */}
       {filteredProducts.length === 0 ? (
         <div className="mt-10 flex flex-col items-center justify-center rounded-2xl border border-dashed border-neutral-300 bg-white/30 py-20 text-center">
           <h3 className="text-lg font-medium text-neutral-900">Buku tidak ditemukan</h3>
           <p className="mt-2 text-sm text-neutral-500">Coba pilih kategori lain.</p>
         </div>
       ) : (
-        <div className="grid grid-cols-2 gap-x-4 gap-y-10 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 md:gap-x-5">
+        <div className="grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 md:gap-x-5">
           {filteredProducts.map((p) => (
             <ProductCard key={p.id} product={p} />
           ))}
