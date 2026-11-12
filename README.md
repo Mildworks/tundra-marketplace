@@ -55,7 +55,7 @@ npm run dev
 
 
 📂 Project Structure
-text
+
 src/
 ├── assets/         # Images and static files
 ├── components/     # Reusable UI components (Navbar, Footer, ProductCard)
@@ -64,3 +64,5 @@ src/
 ├── pages/          # Page components (Home, Katalog, Keranjang, etc.)
 ├── App.jsx         # Main app routing
 └── main.jsx        # Entry point
+
+
